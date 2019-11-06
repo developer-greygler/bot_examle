@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Пример отправки заявок в телеграм-бот</title>
+    <style>
+    /* Стили для примера */
+    body {
+        font-family:Arial, Helvetica, sans-serif;
+        max-width: auto;
+        text-align: center;
+
+        }
+     h1 {
+        margin-bottom: 20px;
+        }
+    .form{
+    	padding-left: 10px;
+    	min-width: 300px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .form p {
+      margin-top: 0px;
+    }
+
+    .form fieldset {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: solid;
+    }
+
+    .form legend {
+      padding: 0px 3px;
+      font-weight: bold;
+      font-variant: small-caps;
+    }
+
+    .form label {
+      width: 200px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 6px;
+    }
+
+    .form em {
+      font-weight: bold;
+      font-style: normal;
+      color: #f00;
+    }
+    .form input:focus {
+      background: #eaeaea;
+    }
+
+    .form input, textarea {
+      width: 70%;
+      font-size: 1.2em;
+    }
+
+    .form textarea {
+      height: 100px;
+    }
+
+    .form select {
+      width: 254px;
+      font-size: 1.2em;
+    }
+
+    .form input[type=checkbox] {
+      width: 15px;
+    }
+
+    .form input[type=submit] {
+      float: right;
+      width: 170px;
+      padding: 10px;
+font-size: 1.2em;
+    }
+    </style>
+</head>
+<body>
+    <h1>Пример отправки заявок в телеграм-бот</h1>
+<form class="form" action="send.php" method="POST">
+    <fieldset>
+    <legend>Пример формы:</legend>
+    <p>
+    <label for="name">Ваше имя: <em>*</em></label>
+    <input id="name" type="text" required name="name" placeholder="Иван Иванов">
+    </p>
+    <p>
+    <label for="phone">Ваш телефон: <em>*</em></label>
+    <input id="phone" type="tel" required name="phone" placeholder="(123) 456-78-90">
+    </p>
+    <p>
+        <label for="comment">Комментарий: </label>
+        <textarea name="comment" rows="3" cols="80"></textarea>
+    </p>
+    <p>
+    <input type="submit" value="Отправить">
+    </p>
+</fieldset>
+</form>
+</body>
+</html>
